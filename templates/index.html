@@ -11,6 +11,9 @@
     <div class="container">
         <img src="https://raw.githubusercontent.com/bradtraversy/python_feedback_app/master/static/logo.png" class="logo" alt="Lexus">
         <!-- to do -->
+        {% if message %}
+            <p class="message">{{ message | safe }}</p>
+        {% endif %}
         <form action="/submit" method="post">
             <div class="form-group">
                 <h3>Customer Name</h3>
